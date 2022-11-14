@@ -1,6 +1,6 @@
 import java.lang.IndexOutOfBoundsException
 
-/*Ex 1Copia la següent funció.  Aquesta funció té la particularitat que, de vegades,
+/*Ex 1 Copia la següent funció. Aquesta funció té la particularitat que, de vegades,
  retorna un enter, però d’altres peta i llança una excepció del tipus ArithmeticException. */
 fun makeSomeDangerousCalc(): Int {
     val randomNumber = (0..100).random()
@@ -44,7 +44,7 @@ fun filterByIndex(list: List<Any>, indexs: List<Int?>): List<Any> {
     return resultat
 }
 
-/*Ex 3 . Implementa una funció que donada una llista, un índex inicial i un índex final,
+/*Ex 3 Implementa una funció que donada una llista, un índex inicial i un índex final,
 retorni la subllista continguda en la primera des del primer índex fins al final. Nota: No es pot fer servir List.sublist()
 Si els índexs són incoherents (ini >= end), s’ha de retornar una llista buida.
 Si els índexs se surten de la llista, s’ha de retornar només el tros de la llista que és correcte.
