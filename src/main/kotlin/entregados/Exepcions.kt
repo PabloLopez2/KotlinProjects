@@ -1,3 +1,5 @@
+package entregados
+
 import java.lang.IndexOutOfBoundsException
 
 /*Ex 1 Copia la següent funció. Aquesta funció té la particularitat que, de vegades,
@@ -53,17 +55,17 @@ ini = 0
 end = {últim índex de la llista}
 */
 
-fun cut(list: List<Any>, ini: Int = 0, end: Int = list.size -1): List<Any> {
+fun cut(list: List<Any>, ini: Int = 0, end: Int = list.size - 1): List<Any> {
     val resultat = arrayListOf<Any>()
     var correctIni = ini
-    if (ini < 0){
+    if (ini < 0) {
         correctIni = 0
     }
     try {
-        for(i in correctIni .. end){
+        for (i in correctIni..end) {
             resultat.add(list[i])
         }
-    }catch (e:ArrayIndexOutOfBoundsException){
+    } catch (e: ArrayIndexOutOfBoundsException) {
         return resultat
     }
     return resultat
@@ -76,5 +78,5 @@ fun main() {
     println()
     filterByIndex(listOf(), emptyList())  //Ex 2
     println()
-    print(cut(listOf("a", "b", "c", "d"),1, 2)) //Ex 3
+    print(cut(listOf("a", "b", "c", "d"), 1, 2)) //Ex 3
 }

@@ -1,3 +1,4 @@
+package entregados
 /* Ex 1 Donades les següents variables. (NO PODEM UTILITZAR n==null)
 a) Indica’n el tipus i si pot ser o no nul·la
                                 Sol·lució:
@@ -9,7 +10,7 @@ val l1 = listOf(1, null, 2)     Si (list<Int?>)
 val l2 = listOf(1, 5, 2)        No (list<Int>)
 
 b) Escriu el resultat de les següents instruccions, si aquestes compilen.
-En cas contrari,  proposa una correcció per tal que s’executin.
+En cas contrari, proposa una correcció per tal que s’executin.
                 Sol·lució:
 n?.plus(i)      ignora la funció plus i tota la funció val null
 n ?: 0          Da 0
@@ -18,7 +19,7 @@ n + i           null + 203 = Peta
 i + j           (n?:0) + i = 203
 s + n           Da "21null"  s + (n?:"")
 l1[2] + 3       No compila, (l1[2]?:0) +3
-l2[2] + 3       Da 5 (pq es el segon element de la llista (2)      */
+l2[2] + 3       Da 5 (pq es el segon element de la llista (2))      */
 
 // Ex 2 Escriu una funció que donats dos Int?, en retorni la suma. Els paràmetres nuls valen 0.
 
@@ -54,7 +55,7 @@ fun nullSafetyAverage(list: List<Int?>?): Double {
 /* Ex 4 Escriu una funció que rep per paràmetre una llista que pot ser nul·la i pot contenir enters nuls.
 Si la llista o qualsevol dels elements és nul, el resultat ha de ser nul, altrament ha de retornar
 la mitjana aritmètica dels seus valors.     */
-fun nullControlAverage(list: List<Int?>?): Double?{
+fun nullControlAverage(list: List<Int?>?): Double? {
     list ?: return 0.0
     var suma = 0.0
 
@@ -78,13 +79,13 @@ fun printOnlyOdds(list: List<Int?>) {
 // Ex 6 Escriu una funció que substitueix els valors nuls per valors aleatoris d’una matriu (llista de llistes)
 fun replaceNulls(matrix: List<List<Int?>>): List<List<Int>> {
     val matrix2 = arrayListOf<ArrayList<Int>>()
-    for (i in matrix.indices) {
+    for (i in 0 until matrix.size) {
 
         matrix2.add(arrayListOf())
 
         for (j in 0 until matrix[0].size) {
 
-            matrix2[i].add(matrix[i][j] ?: (0..9).random())
+            matrix2[i].add(matrix[i][j] ?: (0..99).random())
         }
     }
     return matrix2
