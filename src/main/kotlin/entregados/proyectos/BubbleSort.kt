@@ -1,3 +1,5 @@
+package entregados.proyectos
+
 fun sortOfGuillemLukeSkywalkerPablo(array: ArrayList<Int>) {
     for (i in 0 until array.size) {
         for (j in i downTo 1) { /*Aquí posem downTo fins a 1 perquè ens agafi les iteracions de llista fins al primer element,
