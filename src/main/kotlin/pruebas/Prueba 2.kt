@@ -39,7 +39,7 @@ fun merge(left: List<Int>, right: List<Int>): List<Int> {
 
 fun main() {
     val numbers = arrayListOf(38, 27, 43, 3, 9, 82, 10)
-    val sortedList = mergeSort(numbers)
+    val sortedList = pruebas.mergeSort(numbers)
     println("Unsorted: $numbers")
     println("Sorted: $sortedList")
 }

@@ -180,7 +180,7 @@ en dos partes, una con elementos menores que el pivote y otra con elementos mayo
 función para ordenar cada una de las dos partes y finalmente se combinan en una sola lista ordenada.
  */
 
-// Ex 11 Fes una funció que implementi el merge sort.
+// Ex 11 Fes una funció que implementi el pruebas.merge sort.
 fun mergeSort(list: ArrayList<Int>): ArrayList<Int> {
     if (list.size <= 1) return list
 
@@ -220,11 +220,11 @@ fun merge(left: ArrayList<Int>, right: ArrayList<Int>): ArrayList<Int> {
     return result
 }
 /*
-La función mergeSort toma una lista de enteros y utiliza el método de ordenamiento por mezcla para ordenarla.
+La función pruebas.mergeSort toma una lista de enteros y utiliza el método de ordenamiento por mezcla para ordenarla.
 El algoritmo funciona dividiendo la lista en dos partes y llamando recursivamente a la función para ordenar cada una de las dos partes.
-Luego, se combinan las dos listas ordenadas mediante la función merge.
+Luego, se combinan las dos listas ordenadas mediante la función pruebas.merge.
 
-La función merge combina dos listas ordenadas en una sola lista ordenada mediante el proceso de mezcla.
+La función pruebas.merge combina dos listas ordenadas en una sola lista ordenada mediante el proceso de mezcla.
 Se comparan los elementos de cada lista y se añaden al resultado en el orden correcto hasta que se han agotado
 los elementos de una de las dos listas.
  */
