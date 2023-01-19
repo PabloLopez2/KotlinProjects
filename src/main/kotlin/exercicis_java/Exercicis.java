@@ -208,7 +208,7 @@ public class Exercicis {
     //Ex 10 (recursivitat): fes el quicksort ;)
     public static void Exercici10() {
         ArrayList<Integer> list1 = new ArrayList<>(Arrays.asList(3, 1, 8, 10, 4, 2, 5));
-        quickSort(list1);
+        System.out.println(list1);
     }
 
     public static void quickSort(ArrayList<Integer> list) {
@@ -236,14 +236,3 @@ public class Exercicis {
         list.addAll(greater);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
