@@ -208,6 +208,8 @@ public class Exercicis {
     //Ex 10 (recursivitat): fes el quicksort ;)
     public static void Exercici10() {
         ArrayList<Integer> list1 = new ArrayList<>(Arrays.asList(3, 1, 8, 10, 4, 2, 5));
+        quickSort(list1);
+        System.out.println("Alguien ha pedido un quicksort a domicilio?: ");
         System.out.println(list1);
     }
 
@@ -216,7 +218,7 @@ public class Exercicis {
 
         int pivot = list.get(list.size() / 2);
         ArrayList<Integer> lesser = new ArrayList<>();
-        ArrayList<Integer> greater = new ArrayList<Integer>();
+        ArrayList<Integer> greater = new ArrayList<>();
 
         for (int i = 0; i < list.size(); i++) {
             if (i == list.size() / 2) continue;
@@ -236,3 +238,14 @@ public class Exercicis {
         list.addAll(greater);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
