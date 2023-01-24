@@ -14,7 +14,7 @@ public class MyLinkedList<T> {
     public MyLinkedList() {
         size();
         get(size);
-        set(1, null);
+        set(null, null);
         remove(null);
         addFirst(null);
         addLast(null);
