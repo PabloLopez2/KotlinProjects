@@ -2,6 +2,9 @@ package entregados
 
 import kotlin.math.pow
 
+//NO ES PODEN UTILITZAR BUCLES FOR I WHILE
+//<E> : Indica un tipatge genèric. És a dir, la funció accepta un element de qualsevol tipus, però el tipus ha de coincidir arreu on s'utilitza E.
+
 /* Ex 1: Escriu una funció que calculi canviï totes les vocals d’una frase per la lletra “e”.
 fun dialectalEOf(sentence: List<Char>): List<Char>
 a) Implementa la funció. */
@@ -89,6 +92,23 @@ fun <E> similar(l1: List<E>, l2: List<E>): Boolean {
     return l1.all { l2.contains(it) } && l2.all { l1.contains(it) }
 }
 
+//Ex 6: Fes una funció que sumi element a element dues llistes d’enters
+fun sumLists(l1: List<Int>, l2: List<Int>): List<Int> {
+    return l1.zip(l2) { a, b -> a + b }
+}
+
+//Ex 7: Implementa la següent funció, que donada llista d’enters ordenada, indiqui la posició on cal inserir un nou element.
+fun findInsert(orderedList: List<Int>, newNumber: Int): Int {
+    var position = 0
+    orderedList.forEach {
+        if (newNumber <= it) {
+            return position
+        }
+        position++
+    }
+    return position
+}
+
 
 /*Ex 8: Una funció rep dos nombres i una funció lambda amb la següent capçalera:
 Fes que la funció anonymousMathOperation retorni el resultat d’aplicar la funció lambda operation sobre els nombres a i b.
@@ -99,6 +119,7 @@ fun anonymousMathOperation(a: Int, b: Int, operation: (Int, Int) -> Double): Dou
 
 
 fun main() {
+
     println("\nEx 1: ")
     println(dialectalEOf("panas".map { it }))
     println(dialectalOf("Bon dia nois", Dialect.A))
@@ -106,18 +127,35 @@ fun main() {
     println(dialectalOf("Bon dia nois", Dialect.I))
     println(dialectalOf("Bon dia nois", Dialect.O))
     println(dialectalOf("Bon dia nois", Dialect.U))
+
     println("\nEx 2: ")
     println(productOfPairs(listOf(1, 2, 3, 4, 5, 6)))
+
     println("\nEx 3: ")
     println(powers(listOf(1, 3, 4, 5, 6, 7, 8, 9, 10, 11)))
+
     println("\nEx 4: ")
     println(equals(listOf(1, 2, 3, 4), listOf(1, 3, 4)))
     println(equals2(listOf(0, 1, 3), listOf(0, 1, 2)))
+
     println("\nEx 5: ")
     println(similar(listOf(1, 2, 3), listOf(1, 2, 4)))
+
+    println("\nEx 6: ")
+    println(sumLists(listOf(1,1,2,2), listOf(10,11,12,13)))
+
+    println("\nEx 7: ")
+    val orderedList = listOf(1, 2, 3, 6)
+    val newNumbers = listOf(0, 1, 4, 7)
+    newNumbers.forEach { newNumber ->
+        println("New number: $newNumber Resultat: ${findInsert(orderedList, newNumber)}")
+    }
+
     println("\nEx 8: ")
     println(anonymousMathOperation(3, 6) { a, b ->
         a * b.toDouble()
     })
+
+
 
 }
